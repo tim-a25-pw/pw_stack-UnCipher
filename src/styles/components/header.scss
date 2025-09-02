@@ -4,47 +4,7 @@
     align-items: center;
 
     padding: 20px 20px;
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: typo(5px, 30px);
 
-        font-family: var(--font-primary);
-        font-size: typo(20px, 40px);
-        font-weight: 900;
-        transition: all 0.2s ease-in-out;
-
-        .title {
-            display: flex;
-            justify-content: center;
-            gap: typo(5px, 10px);
-
-            .tim,
-            .qc {
-                transition: all 0.2s ease-in-out;
-            }
-        }
-
-        .icon {
-            z-index: 2;
-            color: var(--color-primary);
-            transition: all 0.3s ease-in-out;
-        }
-        &:hover {
-            .title {
-                .tim {
-                    transform: translateX(-60%);
-                }
-                .qc {
-                    transform: translateX(10%);
-                }
-            }
-
-            .icon {
-                transform: translateX(250%) rotate(135deg) scale(1.5);
-            }
-        }
-    }
     nav {
         @media screen and (max-width: $breakpoint-md) {
             display: none;
@@ -116,5 +76,46 @@
     }
     @media screen and (min-width: $breakpoint-md) {
         display: none;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: typo(5px, 30px);
+
+    font-family: var(--font-primary);
+    font-size: typo(20px, 40px);
+    font-weight: 900;
+    transition: all 0.2s ease-in-out;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        gap: typo(5px, 10px);
+
+        .tim,
+        .qc {
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    .icon {
+        z-index: 2;
+        color: var(--color-primary);
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        .title {
+            .tim {
+                transform: translateX(-60%);
+            }
+            .qc {
+                transform: translateX(10%);
+            }
+        }
+
+        .icon {
+            transform: translateX(250%) rotate(135deg) scale(1.5);
+        }
     }
 }
