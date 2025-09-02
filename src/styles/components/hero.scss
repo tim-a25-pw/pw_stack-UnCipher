@@ -16,6 +16,9 @@
             object-fit: cover;
         }
     }
+    .bold {
+        font-weight: 900;
+    }
     .wrapper {
         padding: 0;
         display: flex;
@@ -35,6 +38,7 @@
         h1 {
             font-size: typo(60px, 100px);
             font-family: var(--font-primary);
+            color: var(--color-secondary);
             font-weight: 500;
             margin-bottom: 30px;
         }
@@ -44,5 +48,21 @@
         }
 
         color: var(--color-white);
+    }
+    @media screen and (max-width: $breakpoint-ml) {
+        .wrapper {
+            padding: 20px;
+        }
+    }
+    @media screen and (max-width: $breakpoint-md) {
+        .wrapper,
+        .hero_content {
+            align-items: center;
+            justify-content: center;
+        }
+        .hero_content {
+            width: 70%;
+            height: 100%;
+        }
     }
 }
