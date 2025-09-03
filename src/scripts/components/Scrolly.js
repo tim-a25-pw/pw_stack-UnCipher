@@ -7,7 +7,7 @@ export default class Scrolly {
       rootMargin: '0px',
       repeat: true,
     };
-
+    this.delay = 0;
    
    
     this.init();
@@ -35,6 +35,10 @@ export default class Scrolly {
     }else {
       this.options.repeat = true;
     }
+    if ('scrollyDelay' in this.element.dataset) {
+      this.delay = this.element.getAttribute("scrolly-delay");
+      console.log(this.delay)
+    }
   }
 
   watch(entries,observer) {
@@ -44,13 +48,14 @@ export default class Scrolly {
       
       
       if (entry.isIntersecting) {
-        
-        target.classList.add('is-active');
-        if ('noRepeat' in target.dataset) {
+        setTimeout(function(){
+          if ('noRepeat' in target.dataset) {
           observer.unobserve(target);
-        }
-      } else {
-        target.classList.remove('is-active');
+          }else {
+            target.classList.remove('is-active');
+          }
+        },this.delay * 1000)
+        target.classList.add('is-active');
       }
     }
   }

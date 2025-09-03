@@ -1,0 +1,101 @@
+
+/* ==========================================================================
+   scrolly / component
+   ========================================================================== */
+// easings.net
+.has-js {
+    [data-scrolly='fromBottom'] {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    [data-scrolly='fromTop'] {
+        opacity: 0;
+        transform: translateY(-60px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    [data-scrolly='fromLeft'] {
+        opacity: 0;
+        transform: translateX(-60px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    [data-scrolly='fromRight'] {
+        opacity: 0;
+        transform: translateX(60px);
+        transition: all 0.4s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    //-----------[[ F L I P ]] ----------------
+    [data-scrolly='flipFromBottom'] {
+        opacity: 0;
+        transform: rotateX(90deg);
+        transition: all 0.7s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateX(0deg);
+        }
+    }
+
+    [data-scrolly='flipFromTop'] {
+        opacity: 0;
+        transform: rotateX(-90deg);
+        transition: all 0.7s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateX(0deg);
+        }
+    }
+    [data-scrolly='flipFromRight'] {
+        opacity: 0;
+        transform: rotateY(90deg);
+        transition: all 0.7s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+    [data-scrolly='flipFromLeft'] {
+        opacity: 0;
+        transform: rotateY(-90deg);
+        transition: all 0.7s ease-out;
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+
+    [data-scrolly='scaleUpY'] {
+        transform: scaleY(0);
+        transition: all 0.3s ease-out;
+
+        &.is-active {
+            transform: scaleY(1);
+        }
+    }
+}

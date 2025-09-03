@@ -3,7 +3,7 @@ export default class Header {
   constructor(element) {
     this.element = element;
     this.options = {
-      threshold: 0.2,
+      threshold: 0.02,
       hide: true,
     };
 
