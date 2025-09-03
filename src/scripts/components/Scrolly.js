@@ -25,19 +25,19 @@ export default class Scrolly {
     for (let index = 0; index < targets.length; index++) {
       const target = targets[index];
       observer.observe(target,observer.options);
-       
     }
   }
 
   setOptions() {
+    console.log('ask prof for help for scrollydelay')
     if ('noRepeat' in this.element.dataset) {
       this.options.repeat = false;
     }else {
       this.options.repeat = true;
     }
+    
     if ('scrollyDelay' in this.element.dataset) {
       this.delay = this.element.getAttribute("scrolly-delay");
-      console.log(this.delay)
     }
   }
 
