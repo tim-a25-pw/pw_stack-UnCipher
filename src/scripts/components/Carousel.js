@@ -4,12 +4,15 @@ export default class Carousel {
   constructor(element) {
     this.element = element;
     this.options = {
+      direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 20,
       pagination: {
         el: this.element.querySelector('.swiper-pagination'),
+        clickable: true,
         type: 'bullets',
       },
+      height: window.innerHeight,
       navigation: {
         nextEl: this.element.querySelector('.swiper-button-next'),
         prevEl: this.element.querySelector('.swiper-button-prev'),
@@ -22,7 +25,6 @@ export default class Carousel {
     this.init();
   }
   setOptions() {
-    console.log('option');
     if ('split' in this.element.dataset) {
       console.log('slppit');
       this.options.breakpoint = {
@@ -32,7 +34,6 @@ export default class Carousel {
       };
     }
     if ('autoplay' in this.element.dataset) {
-      console.log('auto');
       this.options.autoplay = {
         delay: 3000,
         disableOnInteraction: true,

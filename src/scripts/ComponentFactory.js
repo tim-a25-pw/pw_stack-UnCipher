@@ -1,8 +1,10 @@
 import Carousel from './components/Carousel.js';
+import Scrolly from './components/Scrolly.js';
+import Header from './components/Header.js';
 export default class ComponentFactory {
   constructor() {
     this.componentInstances = [];
-    this.componentList = { Carousel };
+    this.componentList = { Carousel,Scrolly,Header };
     this.init();
   }
   init() {

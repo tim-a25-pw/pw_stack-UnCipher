@@ -58,6 +58,7 @@
     "webpack": "^5.0.0"
   },
   "dependencies": {
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "wrapper": "^0.1.0"
   }
 }

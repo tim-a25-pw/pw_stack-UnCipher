@@ -10,8 +10,8 @@
         <script src="scripts/main.js" defer></script>
     </head>
 
-    <body>
-        <div class="header">
+    <body data-component="Scrolly">
+        <div class="header" data-component="Header"  data-threshold="0.4">
     <div class="wrapper">
         <a class="logo" href="#">
             <svg class="icon icon--md">
@@ -22,7 +22,26 @@
                 <span class="qc">québec</span>
             </span>
         </a>
-        <nav>
+        <nav class="nav-primary">
+                <svg class="icon icon--md">
+                    <use xlink:href="#icon-logo"></use>
+                </svg>
+                <ul>
+                    <li>
+                        <a href="#" class="nav-primary__item">Athlètes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-primary__item">Disciplines</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-primary__item">Programmes</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-primary__item">Contact</a>
+                    </li>
+                </ul>
+        </nav>
+        <nav class="nav-desktop">
             <ul>
                 <li><a href="#">Athlètes</a></li>
                 <li><a href="#">Disciplines</a></li>
